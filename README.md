@@ -25,10 +25,10 @@ Just click on a DOM element in the DevTools elements panel, type one of the foll
 
 ## Demo
 ### Playing with components 
-![component](https://user-images.githubusercontent.com/1006426/36344628-b894ca72-141d-11e8-8fb8-92f196160ec2.gif)
+![component](https://user-images.githubusercontent.com/1006426/36467153-c3910a04-16dd-11e8-9228-6338568d7299.gif)
 
 ### Playing with providers
-![providers](https://user-images.githubusercontent.com/1006426/36344666-206bf1ac-141e-11e8-8a66-7d93dec41067.gif)
+![providers](https://user-images.githubusercontent.com/1006426/36467178-e1c1d102-16dd-11e8-9ad3-aad11584185d.gif)
 
 ### State preview
 ![panel](https://user-images.githubusercontent.com/1006426/36344674-4ef7daa4-141e-11e8-88de-9c1edfa9abd7.png)
