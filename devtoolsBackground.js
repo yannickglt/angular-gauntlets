@@ -21,7 +21,7 @@ function getPanelContents() {
       componentInstance = debugElement.componentInstance;
       context = debugElement.context.$implicit ? debugElement.context.$implicit : debugElement.context;
       providers = getProviders(debugElement, ng) || getLegacyProviders(debugElement, ng);
-      detectChanges = () => debugElement._debugInfo._view.changeDetectorRef.detectChanges();
+      detectChanges = () => debugElement.injector.get(ng.coreTokens.ApplicationRef).tick();
     }
   }
 
