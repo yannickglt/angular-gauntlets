@@ -20,6 +20,7 @@ Just click on a DOM element in the DevTools elements panel, type one of the foll
 - `$scope`: equals `$component` onto Angular components or `$context` onto child elements. The best alternative of [AngularJS Batarang](https://github.com/angular/batarang) for Angular.
 - `$providers`: get the list of the all the providers instantiated in your Angular app and play with them.
 - `$detectChanges()`: triggers Angular change detection to get your changes apply.
+- `log$(obs)`: log the first value of the given observable.
 
 **Little extra**: you can get a preview of all these info in the `Angular` tab of your DevTools elements panel. Switching between elements will refresh the data immediately.
 

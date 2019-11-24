@@ -25,7 +25,16 @@ function getPanelContents() {
     }
   }
 
-  exportToWindow(debugElement, componentInstance, context, providers, detectChanges);
+  logObservable = obs => {
+    if (obs && obs.subscribe) {
+      const sub = obs.subscribe(value => {
+        console.log(value)
+        sub.unsubscribe()
+      })
+    }
+  }
+
+  exportToWindow(debugElement, componentInstance, context, providers, detectChanges, logObservable);
 
   return {
     debugElement,
@@ -34,13 +43,14 @@ function getPanelContents() {
     providers
   };
 
-  function exportToWindow(debugElement, componentInstance, context, providers, detectChanges) {
+  function exportToWindow(debugElement, componentInstance, context, providers, detectChanges, logObservable) {
     window.$debugElement = debugElement;
     window.$component = componentInstance;
     window.$context = context;
     window.$providers = providers;
     window.$scope = componentInstance || context; // AngularJS Batarang compatibility
     window.$detectChanges = detectChanges;
+    window.log$ = logObservable;
   }
 
   // Angular 4+

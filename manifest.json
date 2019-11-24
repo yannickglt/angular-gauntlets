@@ -1,6 +1,6 @@
 {
   "name": "Angular Gauntlets",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Add shortcuts to easily debug your Angular application.",
   "devtools_page": "devtoolsBackground.html",
   "manifest_version": 2,
