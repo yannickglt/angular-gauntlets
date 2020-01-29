@@ -27,9 +27,11 @@ function getPanelContents() {
 
   logObservable = obs => {
     if (obs && obs.subscribe) {
-      const sub = obs.subscribe(value => {
+      var sub = obs.subscribe(value => {
         console.log(value)
-        sub.unsubscribe()
+        try {
+          sub.unsubscribe()
+        } catch {}
       })
     }
   }
