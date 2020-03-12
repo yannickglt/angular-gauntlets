@@ -16,12 +16,16 @@ function getPanelContents() {
 
   const ng = window.ng;
   if ($0 && ng) {
-    debugElement = ng.probe($0) || null;
-    if (debugElement) {
+    if (ng.probe && ng.probe($0)) {
+      debugElement = ng.probe($0) || null;
       componentInstance = debugElement.componentInstance;
       context = debugElement.context.$implicit ? debugElement.context.$implicit : debugElement.context;
       providers = getProviders(debugElement, ng) || getLegacyProviders(debugElement, ng);
       detectChanges = () => debugElement.injector.get(ng.coreTokens.ApplicationRef).tick();
+    } else {
+      componentInstance = ng.getComponent($0)
+      context = ng.getContext($0)
+      detectChanges = () => ng.applyChanges(componentInstance)
     }
   }
 
